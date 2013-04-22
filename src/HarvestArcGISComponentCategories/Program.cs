@@ -169,16 +169,16 @@ namespace HarvestArcGISComponentCategories
 			var regSvcs = new RegistrationServices();
 			Assembly assembly = Assembly.LoadFrom(path);
 
-			object[] costumAttributes = assembly.GetCustomAttributes(typeof (GuidAttribute), false);
+			object[] customAttributes = assembly.GetCustomAttributes(typeof (GuidAttribute), false);
 
-			if (costumAttributes.Length <= 0)
+			if (customAttributes.Length <= 0)
 			{
 				Console.WriteLine(string.Format("Assembly {0} does not have a GUID", assembly.FullName));
 
 				return null;
 			}
 			
-			var guidAttribute = (GuidAttribute) costumAttributes[0];
+			var guidAttribute = (GuidAttribute) customAttributes[0];
 			string assemblyGuidString = guidAttribute.Value;
 
 			var assemblyGuid = new Guid(assemblyGuidString);
@@ -199,7 +199,9 @@ namespace HarvestArcGISComponentCategories
 				throw;
 			}
 
-			using (var componentCategoryHarvester = new ComponentCategoryHarvester(true))
+			const bool remapRegistration = true;
+
+			using (var componentCategoryHarvester = new ComponentCategoryHarvester(remapRegistration))
 			{
 				regSvcs.RegisterAssembly(assembly, AssemblyRegistrationFlags.SetCodeBase);
 
