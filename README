@@ -1,0 +1,27 @@
+HarvestArcGISComponentCategories for ArcGIS 10.x
+------------------------------------------------
+
+Commandline utility to use the component category information from an assembly 
+and build an *.ecfg file for it without requiring administrative privileges.
+The same could be done using ESRIRegasm.exe which, however, additionally 
+registers the assembly on the current machine.
+
+This tool is useful on build servers or when automatically creating an msi 
+where it is not desireable write to the registry. For example, using WIX, the 
+COM registration information would be typically harvested by Heat.exe while 
+this tool creates the necessary .ecfg files to be placed in 
+<ProgramFiles>\Common Files\ArcGIS\<Product>\Configuration\CATID\, for example 
+C:\Program Files (x86)\Common Files\ArcGIS\Desktop10.0\Configuration\CATID or 
+C:\Program Files\Common Files\ArcGIS\Server10.0\Configuration\CATID
+
+Binaries are located in the bin directory.
+
+License
+-------
+The source code is partly based on code from the WIX project 
+(http://wix.codeplex.com) and therefore it is published under GPL 1.0.
+
+See License.txt or http://opensource.org/licenses/cpl1.0.php
+
+The included Ionic.Zip.Reduced.dll is licenesed under the Microsoft Public License:
+http://dotnetzip.codeplex.com/license
