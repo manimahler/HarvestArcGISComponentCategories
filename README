@@ -16,12 +16,14 @@ C:\Program Files\Common Files\ArcGIS\Server10.0\Configuration\CATID
 
 Binaries are located in the bin directory.
 
-License
--------
+Licenses
+--------
 The source code is partly based on code from the WIX project 
 (http://wix.codeplex.com) and therefore it is published under GPL 1.0.
 
 See License.txt or http://opensource.org/licenses/cpl1.0.php
 
-The included Ionic.Zip.Reduced.dll is licenesed under the Microsoft Public License:
+Third party binaries:
+The included Ionic.Zip.Reduced.dll is part of the DotNezZip toolset which
+is licensed under the Microsoft Public License:
 http://dotnetzip.codeplex.com/license
