@@ -16,6 +16,8 @@ C:\Program Files\Common Files\ArcGIS\Server10.0\Configuration\CATID
 
 Binaries are located in the bin directory.
 
+Usage: HarvestArcGISCategories.exe <assembly> {output folder}
+
 Licenses
 --------
 The source code is partly based on code from the WIX project 
